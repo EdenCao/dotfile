@@ -75,4 +75,4 @@ let g:deoplete#enable_at_startup = 1
 
 
 """Denite
-map <leader>o :Denite buffer
+map <leader>o :Denite buffer<cr>
