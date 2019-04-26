@@ -83,3 +83,4 @@ Terminal
 [] add global mathing supported
 [] improved terminal using experience
 [] add jsx emmet support
+[] add comment hot key support
