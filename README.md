@@ -22,6 +22,12 @@ yarn global add typescript neovim
 brew cask install macvim
 ```
 
+## Installation
+```sh
+git clone git@github.com:EdenCao/dotfile.git ~/.dotfiles # must be $HOME/.dotfile  
+sh $HOME/.dotfile/install_vim.sh
+```
+
 ## Key Binding
 
 * LeaderKey: `;`
