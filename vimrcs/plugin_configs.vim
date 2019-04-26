@@ -17,6 +17,18 @@ Plug 'vim-airline/vim-airline-themes'
 ""Nerd Tree
 Plug 'scrooloose/nerdtree'
 
+""Auto pairs
+Plug 'jiangmiao/auto-pairs'
+
+"""Yank Stack
+Plug 'maxbrunsfeld/vim-yankstack'
+
+"""jsx/tsx language support
+Plug 'mxw/vim-jsx'
+
+"""Ale(offer language syntax checking)
+Plug 'w0rp/ale'
+
 ""Deoplete
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -29,7 +41,7 @@ Plug 'Shougo/denite.nvim' "Add denite feature
 
 ""Deoplete TypeScript Support
 Plug 'HerringtonDarkholme/yats.vim' "add TypeScript syntax support
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' } "add TypeScript language service
+Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'tsx', 'javascript', 'jsx'] }, { 'do': './install.sh' } "add TypeScript language service to also js/jsx/ts/tsx
 
 ""Deoplete VimL support
 Plug 'Shougo/neco-vim'
@@ -69,10 +81,31 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
+"""Yank Stack
+let g:yankstack_yank_keys = ['y', 'd']
+nmap <c-p> <Plug>yankstack_substitute_older_paste
+nmap <c-n> <Plug>yankstack_substitute_newer_paste
 
 """Deoplete
 let g:deoplete#enable_at_startup = 1
 
-
 """Denite
 map <leader>o :Denite buffer<cr>
+
+
+"""Ale
+let g:ale_linters = {
+\ 'typescript': ['tsserver', 'tslint', 'eslint'],
+\ 'javascript': ['tsserver', 'prettier', 'eslint'],
+\ 'python': ['flake8'],
+\ 'go': ['go', 'golint', 'errorcheck']
+\}
+
+nmap <silent> <leader>a <Plug>(ale_next_wrap)
+
+" Disabling highlighting
+let g:ale_set_highlights = 0
+
+
+"""tsx/jsx support
+autocmd BufRead, BufNewFile, *.tsx setlocal syntax=javascript.jsx
