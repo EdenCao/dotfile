@@ -1,0 +1,42 @@
+[submodule "vim/builtin-plugins/vim-airline"]
+	path = vim/builtin-plugins/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/builtin-plugins/vim-airline-themes"]
+	path = vim/builtin-plugins/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule "vim/builtin-plugins/vim-hybrid-material"]
+	path = vim/builtin-plugins/vim-hybrid-material
+	url = git@github.com:kristijanhusak/vim-hybrid-material.git
+[submodule "vim/builtin-plugins/vim-yankstack"]
+	path = vim/builtin-plugins/vim-yankstack
+	url = git@github.com:maxbrunsfeld/vim-yankstack.git
+[submodule "vim/builtin-plugins/syntastic"]
+	path = vim/builtin-plugins/syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule "vim/builtin-plugins/typescript-vim"]
+	path = vim/builtin-plugins/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "vim/builtin-plugins/vim-js-pretty-template"]
+	path = vim/builtin-plugins/vim-js-pretty-template
+	url = git@github.com:Quramy/vim-js-pretty-template.git
+[submodule "vim/builtin-plugins/tsuquyomi"]
+	path = vim/builtin-plugins/tsuquyomi
+	url = git@github.com:Quramy/tsuquyomi.git
+[submodule "vim/builtin-plugins/YouCompleteMe"]
+	path = vim/builtin-plugins/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/builtin-plugins/vim/builtin-plugins/YouCompleteMe"]
+	path = vim/builtin-plugins/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/builtin-plugins/vim-solidity"]
+	path = vim/builtin-plugins/vim-solidity
+	url = https://github.com/tomlion/vim-solidity.git
+[submodule "vim/builtin-plugins/deoplete.nvim"]
+	path = vim/builtin-plugins/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "vim/builtin-plugins/vim-hug-neovim-rpc"]
+	path = vim/builtin-plugins/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc.git
+[submodule "vim/builtin-plugins/nvim-yarp"]
+	path = vim/builtin-plugins/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp.git
