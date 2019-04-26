@@ -84,3 +84,5 @@ Terminal
 [] improved terminal using experience
 [] add jsx emmet support
 [] add comment hot key support
+[] add jsx completion
+[] improve jsx edit experience

@@ -44,7 +44,9 @@ Plug 'Shougo/denite.nvim' "Add denite feature
 
 ""Deoplete TypeScript Support
 Plug 'HerringtonDarkholme/yats.vim' "add TypeScript syntax support
-Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'tsx', 'javascript', 'javascript.jsx'] }, { 'do': './install.sh' } "add TypeScript language service to also js/jsx/ts/tsx
+
+autocmd BufEnter *.tsx set filetype=typescript "config nvim-typescript support tsx https://github.com/mhartington/nvim-typescript/issues/31
+Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'javascript', 'javascript.jsx'] }, { 'do': './install.sh' } "add TypeScript language service to also js/jsx/ts/tsx
 
 ""Deoplete VimL support
 Plug 'Shougo/neco-vim'
