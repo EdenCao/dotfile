@@ -40,6 +40,9 @@ set number
 filetype plugin on
 filetype indent on
 
+"Allow using system clipboard
+set clipboard=unnamedplus
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -331,6 +334,13 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Terminal
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set splitbelow
+"Bind hot key to open an terminal
+map <leader>` :terminal ++rows=10<cr> 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

@@ -74,3 +74,12 @@ Misc
 * Quickly open a markdown for scribble: `leader-e`
 
 * Toggle paste mode on and off: `leader-pp`
+
+Terminal
+* Create new terminal instance: `leader-``
+
+
+## TODO
+[] add global mathing supported
+[] improved terminal using experience
+[] add jsx emmet support

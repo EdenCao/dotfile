@@ -26,6 +26,9 @@ Plug 'maxbrunsfeld/vim-yankstack'
 """jsx/tsx language support
 Plug 'mxw/vim-jsx'
 
+"""Emmet
+Plug 'mattn/emmet-vim'
+
 """Ale(offer language syntax checking)
 Plug 'w0rp/ale'
 
@@ -41,7 +44,7 @@ Plug 'Shougo/denite.nvim' "Add denite feature
 
 ""Deoplete TypeScript Support
 Plug 'HerringtonDarkholme/yats.vim' "add TypeScript syntax support
-Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'tsx', 'javascript', 'jsx'] }, { 'do': './install.sh' } "add TypeScript language service to also js/jsx/ts/tsx
+Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'tsx', 'javascript', 'javascript.jsx'] }, { 'do': './install.sh' } "add TypeScript language service to also js/jsx/ts/tsx
 
 ""Deoplete VimL support
 Plug 'Shougo/neco-vim'
@@ -108,4 +111,7 @@ let g:ale_set_highlights = 0
 
 
 """tsx/jsx support
-autocmd BufRead, BufNewFile, *.tsx setlocal syntax=javascript.jsx
+autocmd BufRead,BufNewFile *.tsx setlocal syntax=javascript.jsx
+
+"""Emmet install
+autocmd FileType html,gohtmltmpl,javascript,javascript.jsx,tsx imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
