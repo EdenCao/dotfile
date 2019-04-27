@@ -98,9 +98,11 @@ let g:deoplete#enable_at_startup = 1
 map <leader>o :Denite buffer<cr>
 
 
-"""Ale
+"""Ale 
+" config linter of specified language,
+" removed eslint for typescript because ale not support yet: https://github.com/w0rp/ale/issues/668
 let g:ale_linters = {
-\ 'typescript': ['tsserver', 'tslint', 'eslint'],
+\ 'typescript': ['tsserver', 'typecheck', 'tslint'], 
 \ 'javascript': ['tsserver', 'prettier', 'eslint'],
 \ 'python': ['flake8'],
 \ 'go': ['go', 'golint', 'errorcheck']

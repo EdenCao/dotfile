@@ -46,6 +46,9 @@ set clipboard=unnamedplus
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Hide scrollbar
+set guioptions=
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ";"
@@ -130,7 +133,7 @@ endif
 
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+set foldcolumn=0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -191,7 +194,7 @@ set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
-set tw=500
+set tw=120
 
 set ai "Auto indent
 set si "Smart indent
