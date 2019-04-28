@@ -48,6 +48,7 @@ Plug 'HerringtonDarkholme/yats.vim' "add TypeScript syntax support
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }   "add TypeScript language service to also js/jsx/ts/tsx
 
 ""Deoplete JavaScript Support
+Plug 'pangloss/vim-javascript'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 ""Deoplete VimL support
@@ -121,17 +122,15 @@ let g:ale_set_highlights = 0
 let g:user_emmet_install_global=0
 let g:jsx_ext_required=0
 
-" Set JavaScript and Typescript jsx works
-let g:user_emmet_settings = {
-\ 'typescript': {
-\   'extends': 'jsx',
-\ }
-\}
 
-autocmd FileType html,css,jsx,tsx EmmetInstall
+autocmd FileType html,css,jsx,tsx,javascript.jsx,typescript.tsx EmmetInstall
 " Set <Tab> to trigger emmet
 let g:user_emmet_expandabbr_key='<Tab>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+"""Vim JavaScript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 """Deoplete Ternjs
 "Whether to include the types of the completions in the result data
