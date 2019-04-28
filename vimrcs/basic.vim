@@ -341,9 +341,6 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Terminal
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set splitbelow
-"Bind hot key to open an terminal
-map <leader>` :terminal ++rows=10<cr> 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

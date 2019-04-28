@@ -24,10 +24,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'maxbrunsfeld/vim-yankstack'
 
 """jsx/tsx language support
-Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'jsx', 'typescript'] }
 
 """Emmet
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['jsx', 'html', 'css', 'typescript'] }
 
 """Ale(offer language syntax checking)
 Plug 'w0rp/ale'
@@ -45,12 +45,17 @@ Plug 'Shougo/denite.nvim' "Add denite feature
 ""Deoplete TypeScript Support
 Plug 'HerringtonDarkholme/yats.vim' "add TypeScript syntax support
 
-autocmd BufEnter *.tsx set filetype=typescript "config nvim-typescript support tsx https://github.com/mhartington/nvim-typescript/issues/31
-Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'javascript', 'javascript.jsx'] }, { 'do': './install.sh' } "add TypeScript language service to also js/jsx/ts/tsx
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }   "add TypeScript language service to also js/jsx/ts/tsx
+
+""Deoplete JavaScript Support
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 ""Deoplete VimL support
 Plug 'Shougo/neco-vim'
 call plug#end()
+
+"""Deoplete
+let g:deoplete#enable_at_startup = 1
 
 
 """Vim Hybrid Material
@@ -91,8 +96,6 @@ let g:yankstack_yank_keys = ['y', 'd']
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-n> <Plug>yankstack_substitute_newer_paste
 
-"""Deoplete
-let g:deoplete#enable_at_startup = 1
 
 """Denite
 map <leader>o :Denite buffer<cr>
@@ -114,8 +117,40 @@ nmap <silent> <leader>a <Plug>(ale_next_wrap)
 let g:ale_set_highlights = 0
 
 
-"""tsx/jsx support
-autocmd BufRead,BufNewFile *.tsx setlocal syntax=javascript.jsx
-
 """Emmet install
-autocmd FileType html,gohtmltmpl,javascript,javascript.jsx,tsx imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_install_global=0
+let g:jsx_ext_required=0
+
+" Set JavaScript and Typescript jsx works
+let g:user_emmet_settings = {
+\ 'typescript': {
+\   'extends': 'jsx',
+\ }
+\}
+
+autocmd FileType html,css,jsx,tsx EmmetInstall
+" Set <Tab> to trigger emmet
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+"""Deoplete Ternjs
+"Whether to include the types of the completions in the result data
+let g:deoplete#sources#ternjs#types = 1
+
+"Whether to include the distance (in scopes for variables, in prototypes for properties) 
+"between the completions and the origin position in the result data.
+let g:deoplete#sources#ternjs#depths=1
+
+"Whether to include documentation strings (if found) in the result data
+let g:deoplete#sources#ternjs#docs = 1
+
+"Whether to include JavaScript keywords when completing something that is not a 
+" property
+let g:deoplete#sources#ternjs#include_keywords = 1
+
+" Add extra filetypes
+let g:deoplete#sources#ternjs#filetypes = [
+\  'jsx',
+\  'javascript.jsx',
+\  'vue',
+\]

@@ -1,10 +1,7 @@
 # My VIMRC
 
-## Plugin Manager
-
-Use [vim-plug](https://github.com/junegunn/vim-plug)
-
 ## Preparing
+* Vim: NeoVim latest
 * Fonts: [Dank Mono](https://dank.sh)
 * python3(used by deoplete)
 ```sh
@@ -27,6 +24,11 @@ brew cask install macvim
 git clone git@github.com:EdenCao/dotfile.git ~/.dotfiles # must be $HOME/.dotfile  
 sh $HOME/.dotfile/install_vim.sh
 ```
+
+## Plugin Manager
+
+Use [vim-plug](https://github.com/junegunn/vim-plug)
+
 
 ## Key Binding
 
@@ -76,7 +78,6 @@ Misc
 * Toggle paste mode on and off: `leader-pp`
 
 Terminal
-* Create new terminal instance: `leader-``
 
 
 ## TODO
@@ -86,3 +87,4 @@ Terminal
 [] add comment hot key support
 [] add jsx completion
 [] improve jsx edit experience
+[] add symbol prompt when cursor hover
