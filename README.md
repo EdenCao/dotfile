@@ -14,10 +14,6 @@ brew install node #if node not installed yet
 brew install yarn #yarn is a good choice to manage your package
 yarn global add typescript neovim
 ```
-* gvim(get better experience, i used macvim)
-```sh
-brew cask install macvim
-```
 
 ## Installation
 ```sh
