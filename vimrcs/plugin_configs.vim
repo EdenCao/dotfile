@@ -129,8 +129,8 @@ let g:user_emmet_expandabbr_key='<Tab>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 """Vim JavaScript
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
+let g:javascript_plugin_jsdoc = 1 "Enable JSDoc hls
+let g:javascript_plugin_flow = 1 "Enable Flow hls
 
 """Deoplete Ternjs
 "Whether to include the types of the completions in the result data
