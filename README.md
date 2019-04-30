@@ -81,10 +81,12 @@ Terminal
 
 
 ## TODO
-[] add global mathing supported
-[] improved terminal using experience
-[] add jsx emmet support
-[] add comment hot key support
-[] add jsx completion
-[] improve jsx edit experience
-[] add symbol prompt when cursor hover
+- [] add global matching supported
+- [] improved terminal using experience
+- [] add jsx emmet support
+- [] add comment hot key support
+- [x] add jsx completion
+- [] improve jsx edit experience
+- [] add symbol prompt when cursor hover
+- [] fix spec.ts filetype
+- [] fresh treenode hotkey
