@@ -90,3 +90,4 @@ Terminal
 - [] add symbol prompt when cursor hover
 - [] fix spec.ts filetype
 - [] fresh treenode hotkey
+- [] lint ignore according to gitignore folder
